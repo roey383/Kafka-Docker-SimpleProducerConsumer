@@ -19,7 +19,6 @@ public class KafkaSimpleProducer {
 		Properties props = new Properties();
 
 		// Assign localhost id
-		// props.put("bootstrap.servers", "10.0.2.15:9092");
 		props.put("bootstrap.servers", args[0]);
 
 		// Set acknowledgements for producer requests.
@@ -42,15 +41,11 @@ public class KafkaSimpleProducer {
 
 		props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
 
-//		Thread.currentThread().setContextClassLoader(null);
 		Producer<String, String> producer = new KafkaProducer<String, String>(props);
 
 		producer.send(new ProducerRecord<String, String>("FirstTopic", "Key1", "Hello"));
 		producer.send(new ProducerRecord<String, String>("SecondTopic", "Key2", "World"));
-		System.out.println("Message sent successfully");
-		
-		//while (true);
-
+		System.out.println("Message -Hello World- sent successfully");
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -68,14 +63,6 @@ public class KafkaSimpleProducer {
 			producer.send(new ProducerRecord<String, String>(topic, key, value));
 			
 		}
-		
-		
-//		producer.close();
-//            
-//      for(int i = 0; i < 10; i++)
-//         producer.send(new ProducerRecord<String, String>(topicName, 
-//            Integer.toString(i), Integer.toString(i)));
-//               System.out.println("Message sent successfully");
-//               producer.close();
+
 	}
 }
