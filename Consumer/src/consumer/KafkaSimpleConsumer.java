@@ -18,7 +18,7 @@ public class KafkaSimpleConsumer {
 		topicList.add("SecondTopic");
 		Properties props = new Properties();
 
-		props.put("bootstrap.servers", "10.0.2.15:9092");
+		props.put("bootstrap.servers", args[0]);
 		props.put("group.id", "test");
 		props.put("enable.auto.commit", "true");
 		props.put("auto.commit.interval.ms", "1000");

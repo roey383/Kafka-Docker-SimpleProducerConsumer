@@ -20,7 +20,7 @@ public class KafkaSimpleProducer {
 
 		// Assign localhost id
 		// props.put("bootstrap.servers", "10.0.2.15:9092");
-		props.put("bootstrap.servers", "10.0.2.15:9092");
+		props.put("bootstrap.servers", args[0]);
 
 		// Set acknowledgements for producer requests.
 		props.put("acks", "all");
