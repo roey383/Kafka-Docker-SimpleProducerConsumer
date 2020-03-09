@@ -9,10 +9,10 @@ Start a cluster:
 
 In a new terminal:
 * $ docker run -it consumer:1 /bin/bash
-* $ start-consumer/sh YOUR_HOST_IP:9092
+* $ start-consumer/sh YOUR_HOST_IP:9092 <br />
 (In my case: start-consumer 10.0.2.15:9092)
 
 In a new terminal:
 * $ docker run -it producer:1 /bin/bash
-* $ start-producer/sh YOUR_HOST_IP:9092
+* $ start-producer/sh YOUR_HOST_IP:9092 <br />
 (In my case: start-producer 10.0.2.15:9092)
