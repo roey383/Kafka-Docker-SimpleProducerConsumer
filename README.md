@@ -15,7 +15,7 @@ In a new terminal -
 (In my case: $ start-consumer.sh 10.0.2.15:9092)
 
 Start the producer: <br />
-In a new terminal:
+In a new terminal -
 * $ docker run -it producer:1 /bin/bash <br />
 (will enter container bash)
 * $ start-producer.sh YOUR_HOST_IP:9092 <br />
